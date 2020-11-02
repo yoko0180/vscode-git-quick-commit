@@ -9,3 +9,7 @@
 ## 0.1.0 (2020-11-03)
 
 - Supported multi projects
+
+## 0.1.1 (2020-11-03)
+
+- Update CHANGELOG on Marketplace
