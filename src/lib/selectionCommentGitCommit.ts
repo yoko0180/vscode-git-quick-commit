@@ -33,6 +33,11 @@ export default async (options: any): Promise<string> => {
     throw new Error('ワークスペースルートパスが不明です。');
   }
 
-  let cmd = `git add . && git commit -m"${input}"`;
-  return exec(cmd, {cwd: vscode.workspace.rootPath}).then( () => cmd);
+  let commitCmd = `git add . && git commit -m"${input}"`;
+  let workspaceFoler = vscode.workspace.getWorkspaceFolder(editor.document.uri);
+  let workspacePath = workspaceFoler && workspaceFoler.uri.fsPath;
+  if (!workspacePath) {
+    throw new Error("workspacePathが不明です。");
+  }
+  return exec(commitCmd, {cwd: workspacePath}).then( () => commitCmd);
 };
