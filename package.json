@@ -2,7 +2,7 @@
 	"name": "vscode-git-quick-commit",
 	"displayName": "Git Quick Commit",
 	"description": "Quick commit with select text",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"publisher": "yoko0180",
 	"engines": {
